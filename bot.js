@@ -12,6 +12,14 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === '!myavatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.displayAvatarURL());
+  }
+});
+
+client.on('message', message => {
   // Ignore messages that aren't from a guild
   if (!message.guild) return;
 
