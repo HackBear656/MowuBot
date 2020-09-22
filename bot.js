@@ -19,28 +19,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!yesmowu') {
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
-        message.reply('spam');
+        message.send('spam');
     }
 });
 
