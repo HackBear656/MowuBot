@@ -18,12 +18,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!hug') {
-        message.reply(' gave ');
-    }
-});
-
-client.on('message', message => {
   // Ignore messages that aren't from a guild
   if (!message.guild) return;
 
