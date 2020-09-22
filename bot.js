@@ -12,10 +12,36 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!ping') {
-    	message.reply('pong');
-        message.reply('pong');
-  	}
+    if (message.content === '!spam') {
+        message.reply('Ok! Are you sure? Type !yesmowu to confirm.');
+    }
+});
+
+Client.on('message', message => {
+    if (message.content === '!yesmowu') {
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+        message.reply('spam');
+    }
 });
 
 client.on('message', message => {
