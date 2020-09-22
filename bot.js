@@ -12,13 +12,19 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!spam') {
-        message.reply('Ok! Are you sure? Type !yesmowu to confirm.');
+    if (message.content === 'spam') {
+        message.reply('spam');
     }
 });
 
 client.on('message', message => {
-    if (message.content === '!yesmowu') {
+    if (message.content === '!spam') {
+        message.reply('Ok! Are you sure? Type !yesplz to confirm.');
+    }
+});
+
+client.on('message', message => {
+    if (message.content === '!yesplz') {
         message.reply('@everyone spam');
         message.reply('@everyone spam');
         message.reply('@everyone spam');
