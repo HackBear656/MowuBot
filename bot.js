@@ -17,14 +17,11 @@ client.on('message', message => {
     }
 });
 
-if(command === "hug") {
-    if(message.mentions.members.size == 1) {
-        let member = message.mentions.members.first()
-        message.channel.send(`${message.author} gave ${member} a hug!`, {
-            file: "https://media.giphy.com/media/CZpro4AZHs436/giphy.gif"
-        });
+client.on('message', message => {
+    if (message.content === '!hug') {
+        message.reply(' gave ');
     }
-}
+});
 
 client.on('message', message => {
   // Ignore messages that aren't from a guild
