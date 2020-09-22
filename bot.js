@@ -19,7 +19,12 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!yesmowu') {
-        message.send('spam');
+        message.reply('@everyone spam');
+        message.reply('@everyone spam');
+        message.reply('@everyone spam');
+        message.reply('@everyone spam');
+        message.reply('@everyone spam');
+        message.reply('@everyone spam');
     }
 });
 
