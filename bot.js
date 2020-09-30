@@ -120,6 +120,9 @@ if (message.content.startsWith('!hug')) {
       .then(() => {
             // We let the message author know we were able to kick the person
             message.reply(`${user.tag} got a nice big bear hug!!!`);
+          }
+});
+    
       
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.TOKEN);
