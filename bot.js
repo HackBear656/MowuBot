@@ -111,6 +111,15 @@ client.on('message', message => {
   }
 });
 
-
+if (message.content.startsWith('!hug')) {
+    // Assuming we mention someone in the message, this will return the user
+    // Read more about mentions over at https://discord.js.org/#/docs/main/master/class/MessageMentions
+    const user = message.mentions.users.first();
+    // If we have a user mentioned
+    if (user) {
+      .then(() => {
+            // We let the message author know we were able to kick the person
+            message.reply(`${user.tag} got a nice big bear hug!!!`);
+      
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.TOKEN);
