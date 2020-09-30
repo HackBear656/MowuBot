@@ -122,7 +122,7 @@ if (message.content.startsWith('!hug')) {
             message.reply(`${user.tag} got a nice big bear hug!!!`);
           }
 });
-    
+//hug not working:(
       
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.TOKEN);
