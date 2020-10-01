@@ -6,9 +6,15 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === '!ping') {
-    	message.reply('pong');
-  	}
+	if (message.content === `!ping`) {
+		message.channel.send('Pong.');
+	} else if (message.content === `!beep`) {
+		message.channel.send('Boop.');
+	} else if (message.content === `!serverinfo`) {
+		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
+	} else if (message.content === `!whoami`) {
+		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
+	}
 });
 
 client.on('message', message => {
@@ -111,18 +117,7 @@ client.on('message', message => {
   }
 });
 
-if (message.content.startsWith('!hug')) {
-    // Assuming we mention someone in the message, this will return the user
-    // Read more about mentions over at https://discord.js.org/#/docs/main/master/class/MessageMentions
-    const user = message.mentions.users.first();
-    // If we have a user mentioned
-    if (user) {
-      .then(() => {
-            // We let the message author know we were able to kick the person
-            message.reply(`${user.tag} got a nice big bear hug!!!`);
-          }
-});
-//hug not working:(
+
       
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.TOKEN);
