@@ -18,24 +18,6 @@ client.on("guildDelete", guild => {
 });
 
 client.on('message', message => {
-  // If the message is "how to embed"
-  if (message.content === 'm!help') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/master/class/MessageEmbed
-    const embed = new MessageEmbed()
-      // Set the title of the field
-      .setTitle('MowuBot Commands')
-      // Set the color of the embed
-      .setColor(0xff0000)
-      // Set the main content of the embed
-      .setDescription('Commands: 1. !ping 2. !beep 3. !serverinfo 4. !whoami 5. spam 6. !ban (@user) 7. !kick (@user)');
-    // Send the embed to the same channel as the message
-    message.channel.send(embed);
-  }
-});
-
-client.on('message', message => {
 	if (message.content === `!ping`) {
 		message.channel.send('Pong.');
 	} else if (message.content === `!beep`) {
