@@ -14,13 +14,9 @@ client.on('message', message => {
 		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
 	} else if (message.content === `!whoami`) {
 		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
+	} else if (message.content === `spam`) {
+		message.channel.send(`spam`);
 	}
-});
-
-client.on('message', message => {
-    if (message.content === 'spam') {
-        message.reply('spam');
-    }
 });
 
 client.on('message', message => {
