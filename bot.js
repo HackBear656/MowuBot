@@ -5,6 +5,18 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.on("guildCreate", guild => {
+  // This event triggers when the bot joins a guild.
+  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+});
+
+client.on("guildDelete", guild => {
+  // this event triggers when the bot is removed from a guild.
+  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+});
+
 client.on('message', message => {
 	if (message.content === `!ping`) {
 		message.channel.send('Pong.');
@@ -16,7 +28,7 @@ client.on('message', message => {
 		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
 	} else if (message.content === `spam`) {
 		message.channel.send(`spam`);
-	}
+	} 
 });
 
 client.on('message', message => {
